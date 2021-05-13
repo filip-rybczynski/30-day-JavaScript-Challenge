@@ -45,5 +45,13 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filip-rybczynski/30-day-JavaScript-Challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/filip-rybczynski/30-day-JavaScript-Challenge/issues"
+  },
+  "homepage": "https://github.com/filip-rybczynski/30-day-JavaScript-Challenge#readme"
 }
