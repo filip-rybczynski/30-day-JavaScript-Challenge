@@ -1,7 +1,6 @@
 @import "~normalize.css";
 
 @import "_variables";
-// @import "modules/index.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Caveat:wght@700&display=swap');
 
@@ -66,7 +65,7 @@ body {
       font-weight: 700;
       text-align: center;
 
-      color: #efca08;
+      color: $text-accent;
 
     }
 
@@ -89,7 +88,7 @@ body {
     
     font-family: 'Caveat', cursive;
     font-size: 0.5em;
-    color: #efca08;
+    color: $text-accent;
 
     position: relative;
     top: 0.5em;
