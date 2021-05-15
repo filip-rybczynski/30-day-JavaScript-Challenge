@@ -3,7 +3,8 @@
 @import "_variables";
 // @import "modules/index.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Caveat:wght@700&display=swap');
+
 
 body {
   padding: 5%;
@@ -19,6 +20,7 @@ body {
 
 .main {
   &__header {
+    position: relative;
     margin: 0 0 0.7em;
 
     // font-family: "Permanent Marker", cursive;
@@ -52,9 +54,9 @@ body {
         top: 16px;
         left: 8px;
 
-    font-family: "Permanent Marker", cursive;
+    font-family: "Caveat", cursive;
         font-size: 1.5em;
-        font-weight: 500;
+        font-weight: 700;
 
         transform: rotate(-30deg)
     }
@@ -78,4 +80,20 @@ body {
     color: $text;
     text-decoration: none;
     
+  }
+
+  .ish {
+    display: inline-block;
+
+    margin: 0 -25px;
+    
+    font-family: 'Caveat', cursive;
+    font-size: 0.5em;
+    color: #efca08;
+
+    position: relative;
+    top: 0.5em;
+    left: -0.6em;
+    transform: rotate(-20deg);
+
   }
