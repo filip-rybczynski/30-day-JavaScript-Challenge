@@ -40,6 +40,7 @@ body {
     text-align: center;
 
     background: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 4px black;
 
     &__name {
         display: block;
@@ -54,10 +55,13 @@ body {
         display: inline-block;
     }
 
+    transition: all 0.07s;
 }
 
-.pressed {
-
+.playing {
+    transform:scale(1.1);
+    border-color: $accent;
+    box-shadow: 0 0 10px $accent;
 }
 
 footer {
