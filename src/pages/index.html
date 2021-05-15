@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filip's 30 day JavaScript Challenge</title>
-    <meta name="description" content="Project where I complete the 30 day JavaScript Challenge (not necessarily in 30 days) by Wes Bos" />
+    <meta
+      name="description"
+      content="Project where I complete the 30 day JavaScript Challenge (not necessarily in 30 days) by Wes Bos"
+    />
     <!-- Title -->
     <!-- <meta property="og:title" content="" /> -->
     <!-- OPTIONAL description. 2-4 sentences. -->
@@ -16,22 +19,32 @@
       property="og:image"
       content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
     /> -->
-    
   </head>
   <body>
     <h1 class="main__header">Filip's 30 day JavaScript Challenge</h1>
-    <section class="main__section">
-      <article class="challenge">
-        <h2 class="challenge__heading">Day 1</h2>
-        <div class="challenge__description">
-          <span class="challenge__info challenge__info--accent">Project name</span>
-          <span class="challenge__info">XYZ</span>
-          <span class="challenge__info challenge__info--accent">Description</span>
-          <span class="challenge__info">XYZ</span>
-          <span class="challenge__info challenge__info--accent">Date of completion</span>
-          <span class="challenge__info">XYZ</span>
-        </div>
-      </article>
-    </section>
+    <div class="main__section">
+      <a class="article-link" href="src/pages/drum-kit.html" target="_blank">
+        <article class="challenge">
+          <span class="challenge__day">Day 1</span>
+          <h2 class="challenge__name">Drum kit</h2>
+          <p class="challenge__description">
+            Interface for playing drum sounds using keys
+          </p>
+          <span class="challenge__finished">Finished: DD/MM/YYYY</span>
+        </article>
+      </a>
+      
+      <a class="article-link" href="#" target="_blank">
+        <article class="challenge">
+          <span class="challenge__day">Day 2</span>
+          <h2 class="challenge__name">Lorem ipsum</h2>
+          <p class="challenge__description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+          <span class="challenge__finished">Finished: DD/MM/YYYY</span>
+        </article>
+      </a>
+      
+    </div>
   </body>
 </html>
