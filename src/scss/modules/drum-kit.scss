@@ -1,0 +1,91 @@
+@import "~normalize.css";
+
+@import "./../variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Caveat:wght@700&display=swap');
+
+
+body {
+    background-image: url("../../assets/img/drum-kit-bg.jpg");
+    background-size: cover;
+
+    font-family: 'Alegreya Sans SC', sans-serif;
+    
+    color: $text;
+}
+
+.drum-kit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    width: 1000px;
+
+    margin: auto;
+}
+
+.key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 80px;
+    height: 100px;
+
+    border: black solid 6px;
+    border-radius: 8px;
+    
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    &__name {
+        display: block;
+
+        font-size: 3.5em;
+        font-weight: 500;
+
+        color: $accent;
+    }
+
+    &__sound {
+        display: inline-block;
+    }
+
+}
+
+.pressed {
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+
+    padding: 8px;
+
+    background: $bg;
+
+    & a {
+        display: inline-block;
+
+        padding: 2px 8px;
+        margin: 0 8px 0 16px;
+
+        border-radius: 4px;
+        
+        text-decoration: none;
+
+        background: $light-bg;
+        color: $text-accent;
+    }
+}
