@@ -1,13 +1,81 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+// @import "modules/index.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Permanent+Marker&display=swap');
 
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 5%;
+  box-sizing: content-box;
+
   min-height: 100vh;
+  
+  background: $bg;
+  color: $text;
+
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
+
+.main {
+  &__header {
+    margin: 0 0 0.7em;
+
+    // font-family: "Permanent Marker", cursive;
+
+    font-weight: 900;
+    // font-style: italic;
+    font-size: 4em;
+    text-align: center;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 200px);
+    gap: 24px;
+  }
+}
+
+.challenge {
+  position: relative;
+  box-sizing: border-box;
+    padding: 10%;
+    height: 100%;
+
+    background: $light-bg;
+    border: solid 8px $accent;
+    border-radius: 16px;
+
+    &__day {
+        position: absolute;
+        top: 16px;
+        left: 8px;
+
+    font-family: "Permanent Marker", cursive;
+        font-size: 1.5em;
+        font-weight: 500;
+
+        transform: rotate(-30deg)
+    }
+
+    &__name {
+      margin: 0.7em 0;
+      font-weight: 700;
+      text-align: center;
+
+      color: #efca08;
+
+    }
+
+    &__description {
+      font-weight: 400;
+    }
+
+}
+
+.article-link {
+    color: $text;
+    text-decoration: none;
+    
+  }
