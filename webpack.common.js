@@ -39,17 +39,22 @@ module.exports = {
                 attribute: "data-gallery-src",
                 type: "src",
               },
+              {
+                tag: "audio",
+                attribute: "src",
+                type: "src",
+              },
             ],
           },
         },
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|wav)$/i,
         use: [
           {
             loader: "file-loader",
             options: {
-              name: "img/[name].[hash:8].[ext]",
+              name: "media/[name].[hash:8].[ext]",
             },
           },
         ],
