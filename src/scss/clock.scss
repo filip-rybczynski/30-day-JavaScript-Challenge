@@ -2,14 +2,12 @@
 
 @import "./_variables";
 
+@import "./modules/base.scss"; // body and footer styling
+
 body {
-  box-sizing: content-box;
 
-  min-height: 100vh;
+  background: $light-bg;
 
-  color: $text;
-
-  font-family: "Alegreya Sans SC", sans-serif;
 }
 
 .clock {
@@ -19,7 +17,6 @@ body {
 
   min-height: calc(100vh - 1.15em - 16px);
 
-  background: $light-bg;
 
   &__face {
     position: relative;
@@ -67,35 +64,5 @@ body {
       left: calc(180px - (#{$hand-width} * 1.5) / 2); //to account for hand width
 
     }
-  }
-}
-
-footer {
-  position: absolute;
-  bottom: 0px;
-
-  box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100vw;
-
-  padding: 8px;
-
-  background: $bg;
-
-  & a {
-    display: inline-block;
-
-    padding: 2px 8px;
-    margin: 0 8px 0 16px;
-
-    border-radius: 4px;
-
-    text-decoration: none;
-
-    background: $light-bg;
-    color: $text-accent;
   }
 }

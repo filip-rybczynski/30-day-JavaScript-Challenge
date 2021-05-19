@@ -1,4 +1,4 @@
-import '../scss/modules/drum-kit.scss';
+import '../scss/drum-kit.scss';
 
 console.log("hello!");
 
