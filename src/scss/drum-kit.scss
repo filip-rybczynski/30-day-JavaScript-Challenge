@@ -2,10 +2,7 @@
 
 @import "./variables";
 
-@import "./modules/base.scss"; // body and footer styling
-
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Caveat:wght@700&display=swap');
-
+@import "./modules/base.scss"; // body and footer styling + fonts
 
 body {
     background-image: url("../assets/img/drum-kit-bg.jpg");

@@ -7,30 +7,66 @@
     <title>CSS variables</title>
 
     <meta property="og:title" content="Filip's 30 day JavaScript Challenge" />
-    <meta property="og:description" content="Results of me taking a shot at Wes Bos's 30 Day JavaScript Challenge. Will most definitely take me longer than 30 days, but still no reason to not do my best@" />
-    <meta property="og:url" content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/" />
+    <meta
+      property="og:description"
+      content="Results of me taking a shot at Wes Bos's 30 Day JavaScript Challenge. Will most definitely take me longer than 30 days, but still no reason to not do my best@"
+    />
+    <meta
+      property="og:url"
+      content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/"
+    />
     <meta
       property="og:image"
       content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/img/og-cover.png"
     />
   </head>
-<body>
+  <body>
     <main class="editor">
-        <h1 class="editor__header">Update CSS Variables with JS</h1>
-        <div class="editor__controls">
-            <label for="spacing">Spacing:</label>
-            <input id="spacing" aria-label="Spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
-            <label for="blur">Blur:</label>
-            <input id="blur" aria-label="Blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
-            <label for="color">Base Color:</label>
-            <input id="color" aria-label="Base color" type="color" name="Color" value="#BBE6E4">
-       </div>
-        <div class="editor__container">
-            <img class="editor__photo" src="./../assets/img/css-var-photo.jpg" alt="Photo of cross in the mountains">
-        </div>
+      <h1 class="editor__header">
+        Update CSS Variables with <span class="editor__hl">JS</span>
+      </h1>
+      <div class="editor__controls">
+        <label for="padding">Padding:</label>
+        <input
+          id="padding"
+          aria-label="Padding"
+          type="range"
+          name="padding"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+        <label for="blur">Blur:</label>
+        <input
+          id="blur"
+          aria-label="Blur"
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="10"
+          data-sizing="px"
+        />
+        <label for="color">Base Color:</label>
+        <input
+          id="color"
+          aria-label="Base color"
+          type="color"
+          name="base-color"
+          value="#eed13f"
+        />
+      </div>
+
+        <img
+          class="editor__photo"
+          src="./../assets/img/css-var-photo.jpg"
+          alt="Photo of cross in the mountains"
+        />
+
     </main>
     <footer>
-        Filip's 30 Day JavaScript Challenge - day 3 <a href="index.html">Home</a>
-      </footer>
-</body>
+      Filip's 30 Day JavaScript Challenge - day 3 <a href="index.html">Home</a>
+    </footer>
+  </body>
 </html>

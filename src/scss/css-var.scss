@@ -2,7 +2,13 @@
 
 @import "./_variables";
 
-@import "./modules/base.scss"; // body and footer styling
+@import "./modules/base.scss"; // body and footer styling + fonts
+
+:root {
+    --base-color: #eed13f;
+    --padding: 10px;
+    --blur: 10px;
+}
 
 body {
     display: flex;
@@ -27,11 +33,15 @@ body {
 
         font-size: 3em;
 
-        color: $text-accent;
+
+    }
+
+    &__hl {
+        color: var(--base-color);
     }
 
     &__controls {
-        margin: 24px 0px;
+        margin: 16px 0px 24px ;
 
         & label {
             margin: 0px 8px 0px 24px;
@@ -39,5 +49,11 @@ body {
             font-size: 1.5em;
 
         }
+    }
+
+    &__photo {
+        background: var(--base-color);
+        padding: var(--padding);
+        filter: blur(var(--blur));
     }
 }
