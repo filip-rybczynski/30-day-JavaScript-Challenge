@@ -3,14 +3,14 @@ body {
   
     min-height: 100vh;
     
-    background: $bg;
+    background: $light-bg;
     color: $text;
   
     font-family: 'Alegreya Sans SC', sans-serif;
   }
 
   footer {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
 
     box-sizing: border-box;
