@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array Cardio 💪</title>
+        <meta name="twitter:card" content="Filip's 30 day JavaScript Challenge" />
+        <meta name="twitter:creator" content="@FilipRybczynski" />
+        <meta
+          name="description"
+          content="Project where I complete the 30 day JavaScript Challenge (not necessarily in 30 days) by Wes Bos"
+        />
+        <meta property="og:title" content="Filip's 30 day JavaScript Challenge" />
+        <meta
+          property="og:description"
+          content="Results of me taking a shot at Wes Bos's 30 Day JavaScript Challenge. Will most definitely take me longer than 30 days, but still no reason to not do my best@"
+        />
+        <meta
+          property="og:url"
+          content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/"
+        />
+        <meta
+          property="og:image"
+          content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/img/og-cover.png"
+        />
+      </head>
+  <body style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #1daad4;
+  box-sizing: border-box; 
+  font-size: 125%">
+      <h1>Array cardio - array helper methods exercises - Day 1</h1>
+    <p>For ease of reference, JavaScript code for this (and) was written directly in the HTML, under the &lt;script> tag</script></p>
+    <p>Results can be found in the Console 🤓</p>
+        <footer style="font-size: 80%">
+      Filip's 30 Day JavaScript Challenge - day 4 <a href="index.html">Home</a>
+    </footer>
+    <script>
+
+        console.log("Day 4 log: even though today's challenge was only working on arrays, it was still pretty fun. I'm happy with how it went since I was able to complete all of them on my own. Guess I'm starting to get familiar with all these helper methods!");
+
+      // Get your shorts on - this is an array workout!
+      // ## Array Cardio Day 1
+
+      // Some data we can work with
+
+      const inventors = [
+        { first: "Albert", last: "Einstein", year: 1879, passed: 1955 },
+        { first: "Isaac", last: "Newton", year: 1643, passed: 1727 },
+        { first: "Galileo", last: "Galilei", year: 1564, passed: 1642 },
+        { first: "Marie", last: "Curie", year: 1867, passed: 1934 },
+        { first: "Johannes", last: "Kepler", year: 1571, passed: 1630 },
+        { first: "Nicolaus", last: "Copernicus", year: 1473, passed: 1543 },
+        { first: "Max", last: "Planck", year: 1858, passed: 1947 },
+        { first: "Katherine", last: "Blodgett", year: 1898, passed: 1979 },
+        { first: "Ada", last: "Lovelace", year: 1815, passed: 1852 },
+        { first: "Sarah E.", last: "Goode", year: 1855, passed: 1905 },
+        { first: "Lise", last: "Meitner", year: 1878, passed: 1968 },
+        { first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 },
+      ];
+
+      const people = [
+        "Bernhard, Sandra",
+        "Bethea, Erin",
+        "Becker, Carl",
+        "Bentsen, Lloyd",
+        "Beckett, Samuel",
+        "Blake, William",
+        "Berger, Ric",
+        "Beddoes, Mick",
+        "Beethoven, Ludwig",
+        "Belloc, Hilaire",
+        "Begin, Menachem",
+        "Bellow, Saul",
+        "Benchley, Robert",
+        "Blair, Robert",
+        "Benenson, Peter",
+        "Benjamin, Walter",
+        "Berlin, Irving",
+        "Benn, Tony",
+        "Benson, Leana",
+        "Bent, Silas",
+        "Berle, Milton",
+        "Berry, Halle",
+        "Biko, Steve",
+        "Beck, Glenn",
+        "Bergman, Ingmar",
+        "Black, Elk",
+        "Berio, Luciano",
+        "Berne, Eric",
+        "Berra, Yogi",
+        "Berry, Wendell",
+        "Bevan, Aneurin",
+        "Ben-Gurion, David",
+        "Bevel, Ken",
+        "Biden, Joseph",
+        "Bennington, Chester",
+        "Bierce, Ambrose",
+        "Billings, Josh",
+        "Birrell, Augustine",
+        "Blair, Tony",
+        "Beecher, Henry",
+        "Biondo, Frank",
+      ];
+
+      // TASK
+      // Array.prototype.filter()
+      // 1. Filter the list of inventors for those who were born in the 1500's
+
+      const xviCentInv = inventors.filter(
+        (inventor) => inventor.year >= 1500 && inventor.year < 1600
+      );
+      console.table(xviCentInv);
+
+      // TASK
+      // Array.prototype.map()
+      // 2. Give us an array of the inventors first and last names
+
+        // FILIP'S COMMENTS
+      // const invFullNames = inventors.map(inventor => {
+      //   delete inventor.year;
+      //   delete inventor.passed;
+      //   return inventor;
+      // });
+
+      // OR
+
+      const invFullNames = inventors.map((inventor) => ({
+        first: inventor.first,
+        last: inventor.last,
+      }));
+      console.table(invFullNames);
+
+      // TASK
+      // Array.prototype.sort()
+      // 3. Sort the inventors by birthdate, oldest to youngest
+
+      const sortedInv = inventors.sort((a, b) => a.year - b.year);
+      console.table(sortedInv);
+
+      // TASK
+      // Array.prototype.reduce()
+      // 4. How many years did all the inventors live all together?
+
+      const totalInvLifespan = inventors.reduce(
+        (lifespan, investor) => lifespan + investor.passed - investor.year,
+        0
+      );
+
+      console.log(totalInvLifespan);
+
+      // TASK
+      // 5. Sort the inventors by years lived
+
+      const invAges = inventors.sort(
+        (a, b) => a.passed - a.year - (b.passed - b.year)
+      );
+      console.table(invAges);
+
+      // TASK
+      // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+      // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+      // FILIP'S COMMENTS
+      // // Data extracted from the page using the below code in the browser/dev tools:
+
+      // const categories = document.querySelector('.mw-category');
+      // const links = Array.from(categories.querySelectorAll('a')); // or using the spread operator [...category.querySelectorAll('a')]
+
+      //  const de = links.map(link => link.textContent);
+
+      // // The above code gives us:
+      const de = [
+        "Boulevards of Paris",
+        "City walls of Paris",
+        "Thiers wall",
+        "Wall of Charles V",
+        "Wall of Philip II Augustus",
+        "City gates of Paris",
+        "Haussmann's renovation of Paris",
+        "Boulevards of the Marshals",
+        "Boulevard Auguste-Blanqui",
+        "Boulevard Barbès",
+        "Boulevard Beaumarchais",
+        "Boulevard de l'Amiral-Bruix",
+        "Boulevard Mortier",
+        "Boulevard Poniatowski",
+        "Boulevard Soult",
+        "Boulevard des Capucines",
+        "Boulevard de la Chapelle",
+        "Boulevard de Clichy",
+        "Boulevard du Crime",
+        "Boulevard du Général-d'Armée-Jean-Simon",
+        "Boulevard Haussmann",
+        "Boulevard de l'Hôpital",
+        "Boulevard des Italiens",
+        "Boulevard Lefebvre",
+        "Boulevard de la Madeleine",
+        "Boulevard de Magenta",
+        "Boulevard Malesherbes",
+        "Boulevard Marguerite-de-Rochechouart",
+        "Boulevard Montmartre",
+        "Boulevard du Montparnasse",
+        "Boulevard Raspail",
+        "Boulevard Richard-Lenoir",
+        "Boulevard Saint-Germain",
+        "Boulevard Saint-Michel",
+        "Boulevard de Sébastopol",
+        "Boulevard de Strasbourg",
+        "Boulevard du Temple",
+        "Boulevard Voltaire",
+        "Boulevard de la Zone",
+      ];
+
+      // And now the cherry on top:
+
+      const onlyDe = de.filter((streetName) => streetName.includes("de"));
+
+      console.table(onlyDe);
+
+        // TASK
+      // 7. sort Exercise
+      // Sort the people alphabetically by last name
+
+      people.sort(); // simplest solution for sorting strings, without worrying about using .split()
+
+      // FILIP'S COMMENTS
+      // // Course suggestion is:
+
+      // const alpha = people.sort((a, b) => {
+      //   const [aLast, aFirst] = a.split(', ');
+      //   const [bLast, bFirst] = b.split(', ');
+      //   return aLast > bLast ? 1 : -1;
+      // });
+
+      // // Plus, the above won't account for identical last names, where we'd need to move on to sorting by first name somehow
+
+      console.log(people);
+
+      // TASK
+      // 8. Reduce Exercise
+      // Sum up the instances of each of these
+      const data = [
+        "car",
+        "car",
+        "truck",
+        "truck",
+        "bike",
+        "walk",
+        "car",
+        "van",
+        "bike",
+        "walk",
+        "car",
+        "van",
+        "car",
+        "truck",
+      ];
+
+      const sums = data.reduce((countObject, el) => {
+        if (countObject[el]) {
+          countObject[el]++;
+        } else {
+          countObject[el] = 1;
+        }
+        return countObject;
+      }, {});
+
+      console.log(sums);
+    </script>
+  </body>
+</html>

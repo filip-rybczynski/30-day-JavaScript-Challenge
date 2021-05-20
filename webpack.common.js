@@ -107,5 +107,11 @@ module.exports = {
       chunks: ["cssVariables"],
       filename: "css-variables.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/arrays1.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "arrays1.html",
+    }),
   ],
 };
