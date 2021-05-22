@@ -8,6 +8,7 @@ module.exports = {
     drumKit: "./src/js/drum-kit.js",
     clock: "./src/js/clock.js",
     cssVariables: "./src/js/css-var.js",
+    imageGallery: "./src/js/image-gallery.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -112,6 +113,12 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "arrays1.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/image-gallery.html",
+      inject: true,
+      chunks: ["imageGallery"],
+      filename: "image-gallery.html",
     }),
   ],
 };
