@@ -4,6 +4,14 @@
 
 @import "./modules/base.scss"; // body and footer styling + fonts
 
+// html {
+//   box-sizing: border-box;
+// }
+
+// *, *:before, *:after {
+//   box-sizing: inherit;
+// }
+
 body {
   padding: 5%;
   background: $bg;

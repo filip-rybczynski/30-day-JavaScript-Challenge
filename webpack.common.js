@@ -9,6 +9,7 @@ module.exports = {
     clock: "./src/js/clock.js",
     cssVariables: "./src/js/css-var.js",
     imageGallery: "./src/js/image-gallery.js",
+    citySearch: "./src/js/city-search.js"
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -119,6 +120,12 @@ module.exports = {
       inject: true,
       chunks: ["imageGallery"],
       filename: "image-gallery.html",
+    }),
+        new HtmlWebpackPlugin({
+      template: "./src/pages/city-search.html",
+      inject: true,
+      chunks: ["citySearch"],
+      filename: "city-search.html",
     }),
   ],
 };
