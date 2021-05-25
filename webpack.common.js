@@ -127,5 +127,11 @@ module.exports = {
       chunks: ["citySearch"],
       filename: "city-search.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/arrays2.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "arrays2.html",
+    }),
   ],
 };
