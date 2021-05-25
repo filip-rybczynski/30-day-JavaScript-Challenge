@@ -1,98 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700;900&family=Caveat:wght@700&display=swap");
+
 @import "~normalize.css";
 
-@import "_variables";
+@import "./_variables";
 
-@import "./modules/base.scss"; // body and footer styling + fonts
+html {
+  box-sizing: border-box;
+}
 
-// html {
-//   box-sizing: border-box;
-// }
-
-// *, *:before, *:after {
-//   box-sizing: inherit;
-// }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
-  padding: 5%;
-  background: $bg;
+  min-height: 100vh;
+
+  background: $light-bg;
+  color: $text;
+
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 
-.main {
-  &__header {
-    position: relative;
-    margin: 0 0 0.7em;
+footer {
+  position: fixed;
+  bottom: 0px;
 
-    // font-family: "Permanent Marker", cursive;
-
-    font-weight: 900;
-    // font-style: italic;
-    font-size: 4em;
-    text-align: center;
-  }
-
-  &__section {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 200px);
-    gap: 24px;
-  }
-}
-
-.challenge {
-  position: relative;
   box-sizing: border-box;
-    padding: 10%;
-    height: 100%;
 
-    background: $dark-bg;
-    border: solid 8px $accent;
-    border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100vw;
 
-    &__day {
-        position: absolute;
-        top: 16px;
-        left: 8px;
+  padding: 8px;
 
-    font-family: "Caveat", cursive;
-        font-size: 1.5em;
-        font-weight: 700;
+  background: $bg;
 
-        transform: rotate(-30deg)
-    }
-
-    &__name {
-      margin: 0.7em 0;
-      font-weight: 700;
-      text-align: center;
-
-      color: $text-accent;
-
-    }
-
-    &__description {
-      font-weight: 400;
-    }
-
-}
-
-.article-link {
-    color: $text;
-    text-decoration: none;
-    
-  }
-
-  .ish {
+  & a {
     display: inline-block;
 
-    margin: 0 -25px;
-    
-    font-family: 'Caveat', cursive;
-    font-size: 0.5em;
+    padding: 2px 8px;
+    margin: 0 8px 0 16px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    background: $dark-bg;
     color: $text-accent;
-
-    position: relative;
-    top: 0.5em;
-    left: -0.6em;
-    transform: rotate(-20deg);
-
   }
+}

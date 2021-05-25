@@ -1,18 +1,4 @@
-@import "~normalize.css";
-
-@import "./variables";
-
-@import "./modules/base.scss"; // body and footer styling + fonts
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+@import "./../_variables";
 
 .panels {
   min-height: 100vh;
@@ -44,19 +30,19 @@ html {
 }
 
 .panel1 {
-  background-image: url("./../assets/img/panel1.jpg");
+  background-image: url("./../../assets/img/panel1.jpg");
 }
 .panel2 {
-    background-image: url("./../assets/img/panel2.jpg");
+    background-image: url("./../../assets/img/panel2.jpg");
 }
 .panel3 {
-    background-image: url("./../assets/img/panel3.jpg");
+    background-image: url("./../../assets/img/panel3.jpg");
 }
 .panel4 {
-    background-image: url("./../assets/img/panel4.jpg");
+    background-image: url("./../../assets/img/panel4.jpg");
 }
 .panel5 {
-    background-image: url("./../assets/img/panel5.jpg");
+    background-image: url("./../../assets/img/panel5.jpg");
 }
 
 /* Flex Children */

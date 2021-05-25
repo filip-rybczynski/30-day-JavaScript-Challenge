@@ -1,4 +1,4 @@
-import "../scss/clock.scss";
+import "../scss/modules/clock.scss";
 
 const [secHand, minHand, hrHand] = document.querySelectorAll(".clock__hand");
 

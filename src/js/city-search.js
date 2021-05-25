@@ -1,4 +1,6 @@
-import "../scss/city-search.scss";
+import "../scss/modules/city-search.scss";
+
+console.log("Day 6 log: I learned a lot of new things on this one. Got familiar with the perspective property in CSS and with regular expressions");
 
 const endpoint =
   "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";

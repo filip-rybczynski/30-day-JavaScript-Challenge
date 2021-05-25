@@ -1,4 +1,6 @@
-import "../scss/image-gallery.scss";
+import "../scss/modules/image-gallery.scss";
+
+console.log("Day 5 log: Fun challenge, was a great opportunity to practice flexbox and transitions");
 
 const panels = document.querySelectorAll(".panel");
 

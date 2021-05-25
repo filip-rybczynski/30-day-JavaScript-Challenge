@@ -1,8 +1,4 @@
-@import "~normalize.css";
-
-@import "./_variables";
-
-@import "./modules/base.scss"; // body and footer styling + fonts
+@import "./../_variables";
 
 .clock {
   display: flex;
@@ -15,8 +11,8 @@
   &__face {
     position: relative;
 
-    height: 360px;
-    width: 360px;
+    height: 400px;
+    width: 400px;
 
     border: 20px solid $text;
     border-radius: 50%;

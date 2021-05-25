@@ -1,0 +1,86 @@
+@import "./../_variables";
+
+body {
+  padding: 5%;
+  background: $bg;
+}
+
+.main {
+  &__header {
+    position: relative;
+    margin: 0 0 0.7em;
+
+    // font-family: "Permanent Marker", cursive;
+
+    font-weight: 900;
+    // font-style: italic;
+    font-size: 4em;
+    text-align: center;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 200px);
+    gap: 24px;
+  }
+}
+
+.challenge {
+  position: relative;
+  box-sizing: border-box;
+    padding: 10%;
+    height: 100%;
+
+    background: $dark-bg;
+    border: solid 8px $accent;
+    border-radius: 16px;
+
+    &__day {
+        position: absolute;
+        top: 16px;
+        left: 8px;
+
+    font-family: "Caveat", cursive;
+        font-size: 1.5em;
+        font-weight: 700;
+
+        transform: rotate(-30deg)
+    }
+
+    &__name {
+      margin: 0.7em 0;
+      font-weight: 700;
+      text-align: center;
+
+      color: $text-accent;
+
+    }
+
+    &__description {
+      font-weight: 400;
+    }
+
+}
+
+.article-link {
+    color: $text;
+    text-decoration: none;
+    
+  }
+
+  .ish {
+    display: inline-block;
+
+    margin: 0 -25px;
+    
+    font-family: 'Caveat', cursive;
+    font-size: 0.5em;
+    color: $text-accent;
+
+    position: relative;
+    top: 0.5em;
+    left: -0.6em;
+    transform: rotate(-20deg);
+
+  }

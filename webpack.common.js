@@ -9,7 +9,8 @@ module.exports = {
     clock: "./src/js/clock.js",
     cssVariables: "./src/js/css-var.js",
     imageGallery: "./src/js/image-gallery.js",
-    citySearch: "./src/js/city-search.js"
+    citySearch: "./src/js/city-search.js",
+    menu: "./src/js/menu.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -88,25 +89,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index"],
+      chunks: ["index", "menu"],
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/drum-kit.html",
       inject: true,
-      chunks: ["drumKit"],
+      chunks: ["index", "drumKit"],
       filename: "drum-kit.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/clock.html",
       inject: true,
-      chunks: ["clock"],
+      chunks: ["index", "clock"],
       filename: "clock.html",
     }),
         new HtmlWebpackPlugin({
       template: "./src/pages/css-variables.html",
       inject: true,
-      chunks: ["cssVariables"],
+      chunks: ["index", "cssVariables"],
       filename: "css-variables.html",
     }),
     new HtmlWebpackPlugin({
@@ -118,13 +119,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/image-gallery.html",
       inject: true,
-      chunks: ["imageGallery"],
+      chunks: ["index", "imageGallery"],
       filename: "image-gallery.html",
     }),
         new HtmlWebpackPlugin({
       template: "./src/pages/city-search.html",
       inject: true,
-      chunks: ["citySearch"],
+      chunks: ["index", "citySearch"],
       filename: "city-search.html",
     }),
     new HtmlWebpackPlugin({

@@ -1,11 +1,7 @@
-@import "~normalize.css";
-
-@import "./variables";
-
-@import "./modules/base.scss"; // body and footer styling + fonts
+@import "./../_variables";
 
 body {
-    background-image: url("../assets/img/drum-kit-bg.jpg");
+    background-image: url("../../assets/img/drum-kit-bg.jpg");
     background-size: cover;
 }
 

@@ -1,4 +1,4 @@
-import "../scss/drum-kit.scss";
+import "../scss/modules/drum-kit.scss";
 
 console.log("Day 1 log: This was fun! Learned quite a bit with this one, even managed to discover a bug and find a solution to fix it afterwards (previously, if you held a key for too long, the respective field would get stuck on the 'pressed' animation 😅");
 

@@ -1,8 +1,4 @@
-@import "~normalize.css";
-
-@import "./_variables";
-
-@import "./modules/base.scss"; // body and footer styling + fonts
+@import "./../_variables";
 
 :root {
     --base-color: #eed13f;
@@ -24,9 +20,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    max-height: 1200px;
-
-    padding: 3% 5% 5%;
+    max-height: 100vh;
 
     &__header {
         margin: 0px;
@@ -52,6 +46,11 @@ body {
     }
 
     &__photo {
+        max-width: 100%;
+        height: auto;
+
+        margin: 0px 0px 30px;
+
         background: var(--base-color);
         padding: var(--padding);
         filter: blur(var(--blur));

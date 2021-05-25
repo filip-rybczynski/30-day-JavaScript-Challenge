@@ -1,4 +1,4 @@
-import "../scss/css-var.scss";
+import "../scss/modules/css-var.scss";
 
 const inputs = document.querySelectorAll('.editor__controls input');
 
