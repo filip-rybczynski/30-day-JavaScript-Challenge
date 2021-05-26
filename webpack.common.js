@@ -11,6 +11,7 @@ module.exports = {
     imageGallery: "./src/js/image-gallery.js",
     citySearch: "./src/js/city-search.js",
     menu: "./src/js/menu.js",
+    htmlCanvas: "./src/js/html-canvas.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -133,6 +134,12 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "arrays2.html",
+    }),    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/html-canvas.html",
+      inject: true,
+      chunks: ["index", "htmlCanvas"],
+      filename: "html-canvas.html",
     }),
   ],
 };
