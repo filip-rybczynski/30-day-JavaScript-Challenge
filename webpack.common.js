@@ -12,6 +12,7 @@ module.exports = {
     citySearch: "./src/js/city-search.js",
     menu: "./src/js/menu.js",
     htmlCanvas: "./src/js/html-canvas.js",
+    checklist: "./src/js/checklist.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -146,6 +147,12 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "dev-tools.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/checklist.html",
+      inject: true,
+      chunks: ["index", "checklist"],
+      filename: "checklist.html",
     }),
   ],
 };
