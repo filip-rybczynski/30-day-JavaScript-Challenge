@@ -141,5 +141,11 @@ module.exports = {
       chunks: ["index", "htmlCanvas"],
       filename: "html-canvas.html",
     }),
+        new HtmlWebpackPlugin({
+      template: "./src/pages/dev-tools.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "dev-tools.html",
+    }),
   ],
 };

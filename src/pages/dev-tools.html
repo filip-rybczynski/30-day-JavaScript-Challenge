@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array Cardio 💪</title>
+        <meta name="twitter:card" content="Filip's 30 day JavaScript Challenge" />
+        <meta name="twitter:creator" content="@FilipRybczynski" />
+        <meta
+          name="description"
+          content="Project where I complete the 30 day JavaScript Challenge (not necessarily in 30 days) by Wes Bos"
+        />
+        <meta property="og:title" content="Filip's 30 day JavaScript Challenge" />
+        <meta
+          property="og:description"
+          content="Results of me taking a shot at Wes Bos's 30 Day JavaScript Challenge. Will most definitely take me longer than 30 days, but still no reason to not do my best@"
+        />
+        <meta
+          property="og:url"
+          content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/"
+        />
+        <meta
+          property="og:image"
+          content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/img/og-cover.png"
+        />
+      </head>
+  <body style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #1daad4;
+  box-sizing: border-box; 
+  font-size: 125%">
+      <h1>Dev Tools tips and tricks</h1>
+    <p>Check Dev Tools for some creative ways to use the console object 🤓</p>
+    <p onClick="makeGreen()">PS. Click here to change the header's style</p>
+        <footer style="font-size: 80%">
+      Filip's 30 Day JavaScript Challenge - day 9 <a href="index.html">Home</a>
+    </footer>
+    <script>
+console.log('%c Day 9 log: Not much effort required from me today, just watched a quick video with interesting console options. Might be useful some day!', 'font-size:20px; color:green; text-shadow: 2px 2px 0 rgba(0,0,0,0.4)')
+
+const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('h1');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+    console.log('Hello I am a %s string!', '🧵'); // Second argument replaces the %s
+
+    // Styled
+    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+    // warning!
+    console.warn('OH NOOO');
+
+    // Error :|
+    console.error('Oops!');
+
+    // Info
+    console.info('Crocodiles eat 3-4 people per year');
+
+    // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');
+
+    // // clearing
+    // console.clear();
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    console.table(dogs);
+    </script>
+  </body>
+</html>
