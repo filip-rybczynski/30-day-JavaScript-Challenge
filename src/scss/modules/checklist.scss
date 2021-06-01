@@ -1,11 +1,64 @@
+@import "./../_variables";
+
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+h1 {
+    margin-top: 0px;
+}
+
+.inbox {
+    background: $text;
+    color: $dark-bg;
+
+    width: 350px;
+
+    border-radius: 4px;
+
+    box-shadow: 8px 8px rgba(0,0,0,0.3);
+
+    position: relative;
+
+    & p {
+        width: 90%;
+        margin: 0px;
+        padding: 16px 24px 16px 36px;
+    }
+
+    & :not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+
+        height: 100%;
+        width: 1px;
+        background: rgb(255, 0, 0, 0.2);
+        
+        position: absolute;
+        left: 60px;
+    }
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+
 input {
     display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0px 24px;
 }
 
 input + p {
