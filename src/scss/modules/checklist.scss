@@ -12,7 +12,7 @@ input + p {
     display: inline-block;
 }
 
-.selected {
+input:checked + p {
     text-decoration: line-through;
     background: rgba(0,0,0,0.3);
 }

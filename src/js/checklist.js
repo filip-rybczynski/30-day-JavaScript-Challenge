@@ -1,63 +1,41 @@
 import "../scss/modules/checklist.scss";
 
-const checklist = Array.from(document.querySelectorAll("input"));
-
-let shiftDown = false;
+const checklist = Array.from(
+  document.querySelectorAll('.inbox input[type="checkbox"]')
+);
 
 let lastClickedIndex = -1;
 /**
- * Sets to index of last box checked
- *
- * if Shift key is pressed with no boxes checked, it's set to -1 again and the index of the first box checked with Shift down is the new value
+ * Index of last box checked
+ * If all checkboxes are unchecked, value is the index of the first checked checkbox
  */
 
-function crossOut() {
-  let currentIndex = checklist.findIndex((checkbox) => checkbox === this);
+function crossOut(e) {
+  const currentIndex = checklist.findIndex((checkbox) => checkbox === this);
 
-  if (lastClickedIndex >= 0 && shiftDown === true) {
+  if (checklist.filter((checkbox) => checkbox.checked === true).length === 1)
+    lastClickedIndex = currentIndex;
+
+  if (e.shiftKey) {
     if (lastClickedIndex <= currentIndex) {
       checklist.forEach((checkbox, index) => {
-        if (index >= lastClickedIndex && index <= currentIndex) {
-          checkbox.checked = true;
-          checkbox.nextElementSibling.classList.add("selected");
-        } else {
-          checkbox.checked = false;
-          checkbox.nextElementSibling.classList.remove("selected");
-        }
+        checkbox.checked = index >= lastClickedIndex && index <= currentIndex;
       });
-    } else if (lastClickedIndex > currentIndex) {
+    } else {
       checklist.forEach((checkbox, index) => {
-        if (index <= lastClickedIndex && index >= currentIndex) {
-          checkbox.checked = true;
-          checkbox.nextElementSibling.classList.add("selected");
-        } else {
-          checkbox.checked = false;
-          checkbox.nextElementSibling.classList.remove("selected");
-        }
+        checkbox.checked = index <= lastClickedIndex && index >= currentIndex;
       });
     }
     return;
   }
 
-  this.nextElementSibling.classList.toggle("selected");
-
   lastClickedIndex = currentIndex;
 }
 
-checklist.forEach((input, index) => {
-  input.addEventListener("change", crossOut);
-  input.checkboxNo = index;
-});
+checklist.forEach((input) => input.addEventListener("click", crossOut)); // "click" event trigger allows us to also check the keyboard status (specifically, whether the shift key is pressed or not)
 
-window.addEventListener("keydown", function (e) {
-  if (e.key !== "Shift") return;
-  shiftDown = true;
-
-  if (checklist.every((checkbox) => checkbox.checked === false))
-    lastClickedIndex = -1;
-});
-
-window.addEventListener("keyup", function (e) {
-  if (e.key !== "Shift") return;
-  shiftDown = false;
+// Clearing the checklist
+window.addEventListener("keypress", function (e) {
+  if (e.key !== "c") return;
+  checklist.forEach((checkbox) => (checkbox.checked = false));
 });
