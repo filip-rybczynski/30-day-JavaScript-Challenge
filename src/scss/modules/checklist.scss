@@ -15,7 +15,7 @@ h1 {
     background: $text;
     color: $dark-bg;
 
-    width: 350px;
+    width: 380px;
 
     border-radius: 4px;
 
@@ -23,16 +23,10 @@ h1 {
 
     position: relative;
 
-    & p {
-        width: 90%;
-        margin: 0px;
-        padding: 16px 24px 16px 36px;
-    }
-
     & :not(:last-child) {
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
-
+    
     &:before {
         content: '';
         display: inline-block;
@@ -42,30 +36,35 @@ h1 {
         background: rgb(255, 0, 0, 0.2);
         
         position: absolute;
-        left: 60px;
+        left: 59px;
+    }
+
+    &__text {
+        width: 90%;
+        margin: 0px;
+        padding: 16px 24px 16px 36px;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__checkbox {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0px 24px;
+    }
+    
+    &__checkbox + p {
+        display: inline-block;
+    }
+    
+    &__checkbox:checked + p {
+        text-decoration: line-through;
+        background: rgba(0,0,0,0.3);
     }
 }
 
-.item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-
-}
-
-input {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0px 24px;
-}
-
-input + p {
-    display: inline-block;
-}
-
-input:checked + p {
-    text-decoration: line-through;
-    background: rgba(0,0,0,0.3);
-}
