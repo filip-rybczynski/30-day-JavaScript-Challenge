@@ -13,6 +13,7 @@ module.exports = {
     menu: "./src/js/menu.js",
     htmlCanvas: "./src/js/html-canvas.js",
     checklist: "./src/js/checklist.js",
+    customPlayer: "./src/js/custom-player.js"
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -153,6 +154,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "checklist"],
       filename: "checklist.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/custom-player.html",
+      inject: true,
+      chunks: ["index", "customPlayer"],
+      filename: "custom-player.html",
     }),
   ],
 };

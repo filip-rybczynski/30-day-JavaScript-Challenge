@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom video player</title>
+    <meta name="twitter:card" content="Filip's 30 day JavaScript Challenge" />
+    <meta name="twitter:creator" content="@FilipRybczynski" />
+    <meta
+      name="description"
+      content="Project where I complete the 30 day JavaScript Challenge (not necessarily in 30 days) by Wes Bos"
+    />
+    <meta property="og:title" content="Filip's 30 day JavaScript Challenge" />
+    <meta
+      property="og:description"
+      content="Results of me taking a shot at Wes Bos's 30 Day JavaScript Challenge. Will most definitely take me longer than 30 days, but still no reason to not do my best@"
+    />
+    <meta
+      property="og:url"
+      content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/"
+    />
+    <meta
+      property="og:image"
+      content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/img/og-cover.png"
+    />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="player">
+      <video
+        class="player__video viewer"
+        src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+      ></video>
+      <div class="player__controls">
+        <div class="progress">
+          <div class="progress__filled"></div>
+        </div>
+        <button class="player__button toggle" title="Toggle Play">►</button>
+        <input
+          type="range"
+          name="volume"
+          class="player__slider"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+        />
+        <input
+          type="range"
+          name="playbackRate"
+          class="player__slider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+        <button data-skip="-10" class="player__button">« 10s</button>
+        <button data-skip="10" class="player__button">10s »</button>
+        <button class="player__button fullscreen">&#x26F6;</button>
+      </div>
+    </div>
+    <footer>
+      Filip's 30 Day JavaScript Challenge - day 11<a href="index.html">Home</a>
+    </footer>
+  </body>
+</html>
