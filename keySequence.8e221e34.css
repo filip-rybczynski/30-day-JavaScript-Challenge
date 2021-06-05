@@ -1,0 +1,1 @@
+body{display:flex;flex-direction:column;align-items:center;justify-content:center}.secret-button{cursor:pointer;font-size:2em;color:#182931;padding:16px 24px;border-radius:50%;border:6px ridge #df3800;background:linear-gradient(30deg,#efca08,#fff 50%,#efca08);box-shadow:4px 4px 4px rgba(0,0,0,.3)}
