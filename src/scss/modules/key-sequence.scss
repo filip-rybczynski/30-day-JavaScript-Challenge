@@ -1,0 +1,22 @@
+@import "./../_variables";
+
+body {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secret-button {
+    cursor: pointer;
+    font-size: 2em;
+    color: $dark-bg;
+    padding: 16px 24px;
+    border-radius: 50%;
+    border: 6px ridge $strong-accent;
+    background: linear-gradient(30deg, $light-accent 0%, #ffffff 50%, $light-accent 100%);
+    
+
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+
+}

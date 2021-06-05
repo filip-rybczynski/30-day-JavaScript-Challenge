@@ -13,7 +13,8 @@ module.exports = {
     menu: "./src/js/menu.js",
     htmlCanvas: "./src/js/html-canvas.js",
     checklist: "./src/js/checklist.js",
-    customPlayer: "./src/js/custom-player.js"
+    customPlayer: "./src/js/custom-player.js",
+    keySequence: "./src/js/key-sequence.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -160,6 +161,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "customPlayer"],
       filename: "custom-player.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/key-sequence.html",
+      inject: true,
+      chunks: ["index", "keySequence"],
+      filename: "key-sequence.html",
     }),
   ],
 };
