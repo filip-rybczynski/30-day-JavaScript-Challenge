@@ -15,6 +15,7 @@ module.exports = {
     checklist: "./src/js/checklist.js",
     customPlayer: "./src/js/custom-player.js",
     keySequence: "./src/js/key-sequence.js",
+    imageSlide: "./src/js/image-slide.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -167,6 +168,13 @@ module.exports = {
       inject: true,
       chunks: ["index", "keySequence"],
       filename: "key-sequence.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pages/image-slide.html",
+      inject: true,
+      chunks: ["index", "imageSlide"],
+      filename: "image-slide.html",
     }),
   ],
 };
