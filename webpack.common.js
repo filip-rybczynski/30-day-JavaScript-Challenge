@@ -176,5 +176,11 @@ module.exports = {
       chunks: ["index", "imageSlide"],
       filename: "image-slide.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/reference-vs-copy.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "reference-vs-copy.html",
+    }),
   ],
 };
