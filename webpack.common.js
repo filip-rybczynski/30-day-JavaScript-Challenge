@@ -16,6 +16,7 @@ module.exports = {
     customPlayer: "./src/js/custom-player.js",
     keySequence: "./src/js/key-sequence.js",
     imageSlide: "./src/js/image-slide.js",
+    tapasMenu: "./src/js/menu-challenge.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -181,6 +182,12 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "reference-vs-copy.html",
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/menu.html",
+      inject: true,
+      chunks: ["index", "tapasMenu"],
+      filename: "menu.html",
     }),
   ],
 };
