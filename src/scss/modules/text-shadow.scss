@@ -8,9 +8,17 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    font-size: 4em;
+    & h1 {
+      font-size: 8em;
+    }
+
+    & button {
+      font-size: 2em;
+      padding: 8px 24px;
+    }
   }
