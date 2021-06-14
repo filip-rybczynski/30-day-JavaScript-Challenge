@@ -17,6 +17,7 @@ module.exports = {
     keySequence: "./src/js/key-sequence.js",
     imageSlide: "./src/js/image-slide.js",
     tapasMenu: "./src/js/tapas-menu.js",
+    textShadow: "./src/js/text-shadow.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -188,6 +189,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "tapasMenu"],
       filename: "tapas-menu.html",
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/text-shadow.html",
+      inject: true,
+      chunks: ["index", "textShadow"],
+      filename: "text-shadow.html",
     }),
   ],
 };
