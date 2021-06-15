@@ -18,6 +18,7 @@ module.exports = {
     imageSlide: "./src/js/image-slide.js",
     tapasMenu: "./src/js/tapas-menu.js",
     textShadow: "./src/js/text-shadow.js",
+    bandNameSort: "./src/js/band-name-sort.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -196,5 +197,11 @@ module.exports = {
       chunks: ["index", "textShadow"],
       filename: "text-shadow.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/band-name-sort.html",
+    inject: true,
+    chunks: ["index", "bandNameSort"],
+    filename: "band-name-sort.html",
+  }),
   ],
 };
