@@ -1,7 +1,7 @@
-import '../scss/modules/band-name-sort.scss';
+import "../scss/modules/band-name-sort.scss";
 
 const list = document.querySelector("#bands");
-      
+
 const bands = [
   "The Plot in You",
   "The Devil Wears Prada",
@@ -18,30 +18,50 @@ const bands = [
   "An Old Dog",
 ];
 
-const articles = ['A ', 'An ', 'The '];
+console.log(
+  "Day 17 log: Initially I found an overly complicated way to do it, but was reminded of how a useful tool regular expressions are and how they can be helpful in scenarios like this one 😛"
+);
 
-let bandNames = bands.map(band => {
-  let article = articles.find(art => band.indexOf(art) === 0);
+// // MY INITIAL SOLUTION
 
-  if(article) {
-    band = band.slice(article.length);
-  } else {
-    article = '';
-  }
+// const articles = ["A ", "An ", "The "];
 
-  return {
-    article,
-    band
-  }
+// let bandNames = bands.map((band) => {
+//   let article = articles.find((art) => band.indexOf(art) === 0);
 
-})
+//   if (article) {
+//     band = band.slice(article.length);
+//   } else {
+//     article = "";
+//   }
 
-bandNames.sort((a, b) => {
- if(a.band < b.band) return -1;
- if(a.band > b.band) return 1;
- return 0;
-});
+//   return {
+//     article,
+//     band,
+//   };
+// });
 
-console.log(bandNames);
+// bandNames.sort((a, b) => {
+//   if (a.band < b.band) return -1;
+//   if (a.band > b.band) return 1;
+//   return 0;
+// });
 
-list.innerHTML = bandNames.map(name => `<li>${name.article}${name.band}</li>`).join('');
+// list.innerHTML = bandNames
+//   .map((name) => `<li>${name.article}${name.band}</li>`)
+//   .join("");
+
+//Much simpler solution
+
+function removeArticle(string) {
+ const noArt = string.replace(/^(a |an |the )/i,'');
+  return noArt;
+}
+
+bands.sort((a,b) => removeArticle(a) > removeArticle(b) ? 1 : -1 );
+
+
+
+list.innerHTML = bands
+  .map(band => `<li>${band}</li>`)
+  .join("");
