@@ -19,6 +19,7 @@ module.exports = {
     tapasMenu: "./src/js/tapas-menu.js",
     textShadow: "./src/js/text-shadow.js",
     bandNameSort: "./src/js/band-name-sort.js",
+    addingUpTimes: "./src/js/adding-up-times.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -203,5 +204,11 @@ module.exports = {
     chunks: ["index", "bandNameSort"],
     filename: "band-name-sort.html",
   }),
+  new HtmlWebpackPlugin({
+    template: "./src/pages/adding-up-times.html",
+  inject: true,
+  chunks: ["index", "addingUpTimes"],
+  filename: "adding-up-times.html",
+}),
   ],
 };
