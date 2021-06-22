@@ -20,6 +20,7 @@ module.exports = {
     textShadow: "./src/js/text-shadow.js",
     bandNameSort: "./src/js/band-name-sort.js",
     addingUpTimes: "./src/js/adding-up-times.js",
+    photoBooth: "./src/js/photo-booth.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -63,7 +64,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|svg|wav)$/i,
+        test: /\.(png|jpe?g|gif|svg|wav|mp3)$/i,
         use: [
           {
             loader: "file-loader",
@@ -86,9 +87,7 @@ module.exports = {
         {
           from: "public",
           globOptions: {
-            ignore: [
-              '**/*.DS_Store'
-            ],
+            ignore: ["**/*.DS_Store"],
           },
         },
       ],
@@ -113,7 +112,7 @@ module.exports = {
       chunks: ["index", "clock"],
       filename: "clock.html",
     }),
-        new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "./src/pages/css-variables.html",
       inject: true,
       chunks: ["index", "cssVariables"],
@@ -131,7 +130,7 @@ module.exports = {
       chunks: ["index", "imageGallery"],
       filename: "image-gallery.html",
     }),
-        new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "./src/pages/city-search.html",
       inject: true,
       chunks: ["index", "citySearch"],
@@ -142,14 +141,14 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "arrays2.html",
-    }),    
+    }),
     new HtmlWebpackPlugin({
       template: "./src/pages/html-canvas.html",
       inject: true,
       chunks: ["index", "htmlCanvas"],
       filename: "html-canvas.html",
     }),
-        new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "./src/pages/dev-tools.html",
       inject: true,
       chunks: ["index"],
@@ -187,28 +186,34 @@ module.exports = {
       filename: "reference-vs-copy.html",
     }),
     new HtmlWebpackPlugin({
-        template: "./src/pages/tapas-menu.html",
+      template: "./src/pages/tapas-menu.html",
       inject: true,
       chunks: ["index", "tapasMenu"],
       filename: "tapas-menu.html",
     }),
     new HtmlWebpackPlugin({
-        template: "./src/pages/text-shadow.html",
+      template: "./src/pages/text-shadow.html",
       inject: true,
       chunks: ["index", "textShadow"],
       filename: "text-shadow.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/band-name-sort.html",
-    inject: true,
-    chunks: ["index", "bandNameSort"],
-    filename: "band-name-sort.html",
-  }),
-  new HtmlWebpackPlugin({
-    template: "./src/pages/adding-up-times.html",
-  inject: true,
-  chunks: ["index", "addingUpTimes"],
-  filename: "adding-up-times.html",
-}),
+      inject: true,
+      chunks: ["index", "bandNameSort"],
+      filename: "band-name-sort.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/adding-up-times.html",
+      inject: true,
+      chunks: ["index", "addingUpTimes"],
+      filename: "adding-up-times.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/photo-booth.html",
+      inject: true,
+      chunks: ["index", "photoBooth"],
+      filename: "photo-booth.html",
+    }),
   ],
 };
