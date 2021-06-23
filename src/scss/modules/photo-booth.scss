@@ -7,11 +7,15 @@ body {
 
 // CSS copied from course files
 
+.controls {
+  text-align: center;
+}
+
 .photobooth {
     background: white;
-    max-width: 80%;
+    max-width: 640px;
     border-radius: 2px;
-    margin: 0px 0px 64px;
+    margin: 0rem auto 2rem;
   }
   
   /*clearfix*/
@@ -38,8 +42,7 @@ body {
   */
   
   .strip {
-    padding: 2rem;
-
+    padding: 2rem 0rem;
   }
   
   .strip img {
