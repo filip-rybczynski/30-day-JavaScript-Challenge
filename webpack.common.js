@@ -21,6 +21,7 @@ module.exports = {
     bandNameSort: "./src/js/band-name-sort.js",
     addingUpTimes: "./src/js/adding-up-times.js",
     photoBooth: "./src/js/photo-booth.js",
+    speechRecognition: "./src/js/speech-recognition.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -214,6 +215,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "photoBooth"],
       filename: "photo-booth.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/speech-recognition.html",
+      inject: true,
+      chunks: ["index", "speechRecognition"],
+      filename: "speech-recognition.html",
     }),
   ],
 };
