@@ -16,13 +16,22 @@ body {
     // font-style: italic;
     font-size: 4em;
     text-align: center;
+
+    @media screen and (max-width: 425px) {
+      font-size: 2em;
+    }
   }
 
   &__section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(6, 250px);
     gap: 24px;
+
+    @media screen and (max-width: 425px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
