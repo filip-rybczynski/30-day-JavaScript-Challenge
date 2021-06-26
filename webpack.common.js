@@ -22,7 +22,8 @@ module.exports = {
     addingUpTimes: "./src/js/adding-up-times.js",
     photoBooth: "./src/js/photo-booth.js",
     speechRecognition: "./src/js/speech-recognition.js",
-    compass: "./src/js/compass.js"
+    compass: "./src/js/compass.js",
+    followLinks: "./src/js/follow-links.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -228,6 +229,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "compass"],
       filename: "compass.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/follow-links.html",
+      inject: true,
+      chunks: ["index", "followLinks"],
+      filename: "follow-links.html",
     }),
   ],
 };
