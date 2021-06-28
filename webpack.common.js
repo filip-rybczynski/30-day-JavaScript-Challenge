@@ -24,6 +24,7 @@ module.exports = {
     speechRecognition: "./src/js/speech-recognition.js",
     compass: "./src/js/compass.js",
     followLinks: "./src/js/follow-links.js",
+    speechSynth: "./src/js/speech-synth.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -235,6 +236,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "followLinks"],
       filename: "follow-links.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/speech-synth.html",
+      inject: true,
+      chunks: ["index", "speechSynth"],
+      filename: "speech-synth.html",
     }),
   ],
 };
