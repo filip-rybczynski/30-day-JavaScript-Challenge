@@ -25,6 +25,7 @@ module.exports = {
     compass: "./src/js/compass.js",
     followLinks: "./src/js/follow-links.js",
     speechSynth: "./src/js/speech-synth.js",
+    stickyNav: "./src/js/sticky-nav.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -242,6 +243,12 @@ module.exports = {
       inject: true,
       chunks: ["index", "speechSynth"],
       filename: "speech-synth.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/sticky-nav.html",
+      inject: true,
+      chunks: ["index", "stickyNav"],
+      filename: "sticky-nav.html",
     }),
   ],
 };
