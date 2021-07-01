@@ -250,5 +250,12 @@ module.exports = {
       chunks: ["index", "stickyNav"],
       filename: "sticky-nav.html",
     }),
+    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/event-propagation.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "event-propagation.html",
+    }),
   ],
 };
