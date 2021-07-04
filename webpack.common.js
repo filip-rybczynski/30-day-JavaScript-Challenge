@@ -26,6 +26,7 @@ module.exports = {
     followLinks: "./src/js/follow-links.js",
     speechSynth: "./src/js/speech-synth.js",
     stickyNav: "./src/js/sticky-nav.js",
+    movingDropdown: "./src/js/moving-dropdown.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -256,6 +257,13 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "event-propagation.html",
+    }),
+    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/moving-dropdown.html",
+      inject: true,
+      chunks: ["index", "movingDropdown"],
+      filename: "moving-dropdown.html",
     }),
   ],
 };

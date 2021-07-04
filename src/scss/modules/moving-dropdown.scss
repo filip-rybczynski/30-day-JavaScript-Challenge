@@ -1,0 +1,139 @@
+@import "./../_variables";
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $dark-bg;
+  background-image: linear-gradient(
+    43deg,
+    $dark-bg 0%,
+    #105a6d 56%,
+    $light-bg 100%
+  );
+}
+
+main {
+  margin: 0 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3em;
+}
+
+.nav-bar {
+  // position: relative;
+
+  &__elements {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    & > li {
+      list-style: none;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > a {
+        color: $dark-bg;
+        font-weight: 700;
+        font-size: 1.5em;
+        margin: 0px 0px 24px;
+        padding: 8px;
+        text-align: center;
+        width: 80%;
+        background: $accent;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &__dropdown-bg {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: $dark-bg;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+
+    &-arrow {
+      position: absolute;
+
+      display: inline-block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: inherit;
+
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__dropdown {
+    list-style: inherit;
+    padding: 8px 16px;
+    // opacity: 0;
+    // display: none;
+  }
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__bio {
+    text-align: justify;
+  }
+
+  &__pic {
+    border-radius: 50%;
+  }
+}
+
+.projects {
+  & > li {
+    margin: 8px 0px;
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & > a {
+      color: $strong-accent;
+    }
+  }
+}
+
+.social {
+  width: 50%;
+  & > li {
+    display: inline-block;
+    width: 100%;
+    margin: 8px 0px;
+    font-size: 1.2em;
+  }
+  &__button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    color: $text;
+    background: linear-gradient(30deg, $dark-bg 10%, $bg 45%, $bg 55%, $dark-bg 90%);
+    border-radius: 16px;
+    border: 4px $text solid;
+  }
+}
