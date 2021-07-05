@@ -30,25 +30,27 @@
   <body>
     <main>
       <h1 class="header">Check out this cool moving dropdown! 👇</h1>
-      <nav class="nav-bar">
-        <div class="nav-bar__dropdown-bg">
+      <nav class="nav-bar nav--js">
+        <div class="nav-bar__dropdown-bg bg--js">
           <span class="nav-bar__dropdown-bg-arrow"></span>
         </div>
 
-        <ul class="nav-bar__elements">
+        <ul class="nav-bar__elements nav-elements--js">
           <li>
             <a href="https://filip-rybczynski.github.io/">About me</a>
-            <div class="nav-bar__dropdown general">
+            <div class="nav-bar__dropdown dropdown--js">
+              <div class="general">
               <img class="general__pic" src="https://filip-rybczynski.github.io/img/portrait.6d81b246.jpg"/>
               <p class="general__bio">
                 Hi! My name is Filip and I'm an aspiring frontend developer.
                 Hoping for a true zero to hero story!
               </p>
             </div>
+            </div>
           </li>
           <li>
             <a href="#">Projects</a>
-            <ul class="nav-bar__dropdown projects">
+            <ul class="nav-bar__dropdown projects dropdown--js">
               <li><span>Project 1:</span> <a href="https://filip-rybczynski.github.io/">My dev page</a></li>
               <li><span>Project 3:</span> <a href="https://filip-rybczynski.github.io/text-editor/">Drinkapp</a></li>
               <li><span>Project 2:</span> <a href="https://filip-rybczynski.github.io/text-editor/">Text editor</a></li>
@@ -56,7 +58,7 @@
           </li>
           <li>
             <a href="#">Find me</a>
-            <ul class="nav-bar__dropdown social">
+            <ul class="nav-bar__dropdown social dropdown--js">
               <li><a href="#" class="social__button">Github</a></li>
               <li><a href="#" class="social__button">LinkedIn</a></li>
               <li><a href="#" class="social__button">Twitter</a></li>
