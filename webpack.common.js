@@ -27,6 +27,7 @@ module.exports = {
     speechSynth: "./src/js/speech-synth.js",
     stickyNav: "./src/js/sticky-nav.js",
     movingDropdown: "./src/js/moving-dropdown.js",
+    clickAndDrag: "./src/js/click-and-drag.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -264,6 +265,13 @@ module.exports = {
       inject: true,
       chunks: ["index", "movingDropdown"],
       filename: "moving-dropdown.html",
+    }),
+    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/click-and-drag.html",
+      inject: true,
+      chunks: ["index", "clickAndDrag"],
+      filename: "click-and-drag.html",
     }),
   ],
 };
