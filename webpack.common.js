@@ -28,6 +28,7 @@ module.exports = {
     stickyNav: "./src/js/sticky-nav.js",
     movingDropdown: "./src/js/moving-dropdown.js",
     clickAndDrag: "./src/js/click-and-drag.js",
+    videoSpeed: "./src/js/video-speed.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -272,6 +273,13 @@ module.exports = {
       inject: true,
       chunks: ["index", "clickAndDrag"],
       filename: "click-and-drag.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pages/video-speed.html",
+      inject: true,
+      chunks: ["index", "videoSpeed"],
+      filename: "video-speed.html",
     }),
   ],
 };
