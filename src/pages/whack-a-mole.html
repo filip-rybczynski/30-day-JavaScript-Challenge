@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-a-mole!</title>
+    <meta name="twitter:card" content="Filip's 30 day JavaScript Challenge" />
+    <meta name="twitter:creator" content="@FilipRybczynski" />
+    <meta property="og:title" content="Filip's 30 day JavaScript Challenge" />
+    <meta
+      property="og:description"
+      content="Results of me taking a shot at Wes Bos's 30 Day JavaScript Challenge. Will most definitely take me longer than 30 days, but still no reason to not do my best@"
+    />
+    <meta
+      property="og:url"
+      content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/"
+    />
+    <meta
+      property="og:image"
+      content="https://filip-rybczynski.github.io/30-day-JavaScript-Challenge/img/og-cover.png"
+    />
+
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+  </head>
+<body>
+<main>
+    <h1>Whack-a-mole! <span class="score">0</span></h1>
+    <div class="extra">
+        <button class="button" onClick="startGame()">Start!</button>
+        <span class="high-score">High score: <span class="high-score--js">0</span></span>
+    </div>
+  
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+    </div>
+</main>
+
+    <footer>
+        Filip's 30 Day JavaScript Challenge - day 30 <a href="index.html">Home</a>
+      </footer>
+  
+  <script>
+    const holes = document.querySelectorAll('.hole');
+    const scoreBoard = document.querySelector('.score');
+    const moles = document.querySelectorAll('.mole');
+  
+  </script>
+  </body>
+  </html>

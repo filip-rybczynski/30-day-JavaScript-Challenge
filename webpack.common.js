@@ -30,6 +30,7 @@ module.exports = {
     clickAndDrag: "./src/js/click-and-drag.js",
     videoSpeed: "./src/js/video-speed.js",
     countdownClock: "./src/js/countdown-clock.js",
+    whackAMole: "./src/js/whack-a-mole.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -288,6 +289,13 @@ module.exports = {
       inject: true,
       chunks: ["index", "countdownClock"],
       filename: "countdown-clock.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/pages/whack-a-mole.html",
+      inject: true,
+      chunks: ["index", "whackAMole"],
+      filename: "whack-a-mole.html",
     }),
   ],
 };

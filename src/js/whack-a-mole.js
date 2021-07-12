@@ -1,0 +1,1 @@
+import "./../scss/modules/whack-a-mole.scss";
