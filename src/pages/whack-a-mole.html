@@ -28,7 +28,8 @@
 <main>
     <h1>Whack-a-mole! <span class="score">0</span></h1>
     <div class="extra">
-        <button class="button" onClick="startGame()">Start!</button>
+        <button class="button button--js">Start!</button>
+        <span class="timer timer--js"></span>
         <span class="high-score">High score: <span class="high-score--js">0</span></span>
     </div>
   
@@ -57,12 +58,6 @@
     <footer>
         Filip's 30 Day JavaScript Challenge - day 30 <a href="index.html">Home</a>
       </footer>
-  
-  <script>
-    const holes = document.querySelectorAll('.hole');
-    const scoreBoard = document.querySelector('.score');
-    const moles = document.querySelectorAll('.mole');
-  
-  </script>
+
   </body>
   </html>
